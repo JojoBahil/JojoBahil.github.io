@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jason Bahil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #95bacf;
+            text-align: center;
+        }
+        body{
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+        }
+        .nav{
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: fixed;
+        }
+        .page_name{
+            font-size: 25px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .menu_items{
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 5px;
+            float: center;
+        }
+        .menu_items a{
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 10px;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        #profile_picture{
+            margin-top: 10%;
+            margin-bottom: 30px;
+            border-radius: 50%;
+        }
+
+        #name{
+            font-size: 70px;
+        }
+
+        
+        #address{
+            margin-top: -25px;
+        }
+
+        #email_address{
+            margin-top: -18px;
+        }
+        #work_email_address{
+            margin-top: -43px;
+        }
+        #contact_number{
+            margin-top: -43px;
+        }
+
+        .contact_information{
+            font-size: 12px;
+        }
+
+        /* ACHIEVEMENTS */
+        #achievements{
+            background-color: rgba(1, 41, 73, 0.4);
+            width: 100%;
+            margin-top: 80px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #achievements h1{
+            margin: 15px 0;
+        }
+
+        #achievements ul{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #achievements ul li{
+            text-align: left;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+        /* SKILLS */
+        #skills{
+            width: 100%;
+            margin-top: 0px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        #skills h1{
+            margin: 15px 0;
+        }
+
+        #skills ul li{
+            text-align: left;
+            list-style-type: none;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+        /* EDUCATIONAL ATTAINMENTS */
+        #educational_attainments{
+            background-color: rgba(1, 41, 73, 0.4);
+            width: 100%;
+            margin-top: 0px;
+            padding: 20px;
+        }
+
+        #educational_attainments h1{
+            margin: 15px 0;
+        }
+
+        #educational_attainments ul li{
+            text-align: left;
+            list-style-type: none;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+        /* TRAININGS */
+        #trainings{
+            width: 100%;
+            margin-top: 0px;
+            padding: 20px;
+        }
+
+        #trainings h1{
+            margin: 15px 0;
+        }
+
+        #trainings ul li{
+            text-align: left;
+            list-style-type: none;
+            padding: 5px;
+            font-size: 15px;
+        }
+        .skills_table{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table tr td, table tr td h4{
+            text-align: left;
+        }
+        
+        #particles-js{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .attainments{
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .attainments tr td p{
+            text-align: left;
+        }
+
+        .training_table{
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .training_table tr td{
+            text-align: center;
+        }
+
+        .training_table tr td p{
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .training_table tr td p .trainer{
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        .training_table tr .training_year{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="page_name col-lg-4 col-md-4">
+            MyPortfolio
+        </div>
+        <div class="menu col-lg-8 col-md-8">
+            <!-- <ul class="menu_items">
+                <li><a href="#personal_data">Personal Data</a></li>
+                <li><a href="#acheivements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#educational_attainments">Educational Attainments</a></li>
+                <li><a href="#trainings">Trainings</a></li>
+            </ul> -->
+        </div>
+    </div>
+    <div id="particles-js"></div>
+    <div class="container-fluid wrapper particles-js">        
+        <div id="personal_data">
+            <img id="profile_picture" src="profile.jpg" alt="" width="340" height="340"><br>
+            <p class="contact_information" id="name">JASON BAHIL</p>
+            <p class="contact_information" id="address">Block 2 Lot 8, Pantabangan Street, Nia Village, Sauyo, Quezon City</p>
+            <p class="contact_information" id="email_address">jbahil47@gmail.com</p><br>
+            <p class="contact_information" id="work_email_address">jbahil.unifast@ched.gov.ph</p><br>
+            <p class="contact_information" id="contact_number">09120799370</p>
+            
+            <!-- <div class="secondary_informations">
+                <label>Date of Birth</label><p>December 19, 1992</p>
+                <label>Gender</label><p>Male</p>
+                <label>Nationality</label><p>Pilipino</p>
+                <label>Marital Status</label><p>Single</p>
+            </div> -->
+        </div>
+        <div id="achievements" data-aos="flip-left" data-aos-duration="3000">
+            <h1>Achievements</h1><br>
+            <ul>
+                <li>Developed and deployed the LANDBANK Mastercard Prepaid Card (LMPC) Application Portal for Tertiary Education Subsidy (TES) Grantees</li>
+                <li>Developed and deployed the LANDBANK Mastercard Prepaid Card Admin Portal for UniFAST Secretariat</li>
+                <li>Managed the development and deployment of UniFAST Inventory Management System</li>
+                <li>Managed the development of UniFAST Free Higher Education Automated Billing System</li>
+                <li>Managed the development of UniFAST Chatbot</li>
+                <li>Managed the development of UniFAST Website Content Management System</li>
+                <li>Processed the Grantee's application for the LMPC</li>
+                <li>Procurement of UniFAST items and subscriptions</li>
+            </ul>
+        </div>
+        <div id="skills" data-aos="fade-down" data-aos-duration="3000">
+            <h1>Skills</h1><br>
+            <table class="skills_table">
+                <tr>
+                    <td>
+                        <h4>Web Development</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Software Development</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>3D Animation</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>3D Modeling</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Game Development</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Photo Editing</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Musical Instruments</h4>
+                    </td>
+                    <td>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(74, 213, 248);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                        <span style="border-radius: 50%;background-color:rgb(16, 48, 56);padding:1px 10px;margin:5px 5px;"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="educational_attainments" data-aos="fade-right" data-aos-duration="3000">
+            <h1>Educational Attainments</h1><br>
+            <table class="attainments">
+                <tr>
+                    <td width="160">
+                        2010 - 2016
+                    </td>
+                    <td>
+                        <p><b>Tertiary</b><br>Bachelor of Science and Technology (BSIT)<br><i>STI Fairview</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="160">
+                        2012 - 2012
+                    </td>
+                    <td>
+                        <p><b>Vocational</b><br>Mechatronics Servicing NCII<br><i>TESDA - Quezon City Lingkod Bayan Skills Development Center</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="160">
+                        2011 - 2011
+                    </td>
+                    <td>
+                        <p><b>Vocational</b><br>Electronics Servicing NCII<br><i>TESDA - Quezon City Lingkod Bayan Skills Development Center</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="160">
+                        2006 - 2010
+                    </td>
+                    <td>
+                        <p><b>Secondary</b><br><i>Bethel Christian School</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="160">
+                        2000 - 2006
+                    </td>
+                    <td>
+                        <p><b>Primary</b><br><i>Sauyo Elementary School</i></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="trainings" data-aos="fade-left" data-aos-duration="3000">
+            <h1>Trainings</h1><br>
+            <table class="training_table">
+                <tr>
+                    <td width="120" class="training_year">
+                        2022
+                    </td>
+                    <td width="120">
+                        40 hours
+                    </td>
+                    <td width="360">
+                        <p>Sustainable Development Goals Webinar<br><span class="trainer">Philippine Statistical Research and Training Institution</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="120" class="training_year">
+                        2022
+                    </td>
+                    <td width="120">
+                        40 hours
+                    </td>
+                    <td width="360">
+                        <p>Cybersecurity Competency Framework<br><span class="trainer">Department of Information and Communications Technology</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="120" class="training_year">
+                        2017
+                    </td>
+                    <td width="120">
+                        36 hours
+                    </td>
+                    <td width="360">
+                        <p>Web Development<br><span class="trainer">Excel Technical Skills and Career Center</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="120" class="training_year">
+                        2017
+                    </td>
+                    <td width="120">
+                        300 hours
+                    </td>
+                    <td width="360">
+                        <p>Software Development<br><span class="trainer">Pentagamma Software Development</span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script> <!-- bootstrap -->
+    <script type="text/javascript" src="particles.js-master/particles.js"></script>
+    <script type="text/javascript" src="particles.js-master/demo/js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
